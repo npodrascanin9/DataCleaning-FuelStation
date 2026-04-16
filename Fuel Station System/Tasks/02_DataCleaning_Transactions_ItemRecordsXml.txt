@@ -1,0 +1,43 @@
+Task 02: Data Cleaning – Transactions and ItemRecordsXml
+
+
+
+
+Business Problem:
+
+In the current model, the Transactions table stores fuel details inside the ItemRecordsXml column using XML.
+
+While this design allowed flexible storage at the start, it makes reporting and analytics difficult. Business users cannot easily query or aggregate sales data because they must parse XML, which slows down performance and requires technical expertise.
+
+Applications and ETL processes also face extra complexity when working with XML, increasing maintenance costs and risk of errors.
+
+As a result, business teams struggle to access clear insights about fuel sales, discounts, and pump activity.
+
+
+
+
+
+
+Business Goal:
+
+Simplify data access by moving transaction items into a dedicated relational table (TransactionItems).
+
+Enable faster reporting, easier analytics, and cleaner integration with applications.
+
+Keep the original XML column for compatibility with existing systems that rely on it.
+
+
+
+
+Outcome:
+
+Transaction items are stored in a structured table linked to Transactions and FuelTypes.
+
+Business users can run queries and reports without dealing with XML parsing.
+
+IT teams retain the XML data for fallback, while applications continue to operate smoothly.
+
+
+
+Solution:
+	- check data cleaning file located in DataCleaning/Transactions_ItemRecordsXmlColumn_DataCleaning.sql
