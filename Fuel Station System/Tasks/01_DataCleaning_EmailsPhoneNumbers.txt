@@ -1,0 +1,20 @@
+Task 01: Data Cleaning – Emails and PhoneNumbers
+
+Business Problem:
+- In the current model, drivers can have multiple email addresses and phone numbers, which are stored in separate tables (DriverEmails, DriverPhoneNumbers).
+- This approach was correct for relational database design (one driver – multiple contacts), but in practice most drivers have only one or two contact details.
+- As a result, reports and queries become complicated, requiring additional JOIN operations and aggregations, which slows down analytics and makes it harder for business users to work with the data.
+- Furthermore, applications that use the database (e.g., .NET services with Dapper or Entity Framework Core, as well as ETL processes) must work with multiple tables, which increases complexity and the risk of errors.
+
+Business Goal:
+- Simplify data access by storing emails and phone numbers directly in the Drivers table.
+- Enable faster reporting and easier data usage in applications.
+- Retain the original tables (DriverEmails, DriverPhoneNumbers) for compatibility with existing procedures and applications that rely on them.
+
+Outcome:
+- Drivers have consolidated contact information in a single table.
+- Business users can perform analyses and reporting more easily.
+- The IT team has backups and a fallback option, while applications continue to function without disruption.
+
+
+The solution is located in Data Cleaning folder.
