@@ -1,0 +1,5 @@
+- Some drivers might contain invalid emails, it would be a good idea to write a sql user function - Verify Email
+- Write a view that fetches DriversWithInvalidEmails
+
+Challenge:
+- After cleaning data in task 01 (adding a new column Emails to Drivers), this would require more code :)
