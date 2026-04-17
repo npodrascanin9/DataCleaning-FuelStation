@@ -3,3 +3,7 @@
 
 Challenge:
 - After cleaning data in task 01 (adding a new column Emails to Drivers), this would require more code :)
+
+Solution:
+  - function is located in folder Functions/VerifyEmail_UserFunction.sql
+  - data cleaning script is located in DataCleaning/Drivers_SetInvalidEmailsToNull_DataCleaning.sql
